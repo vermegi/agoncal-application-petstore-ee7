@@ -3,9 +3,9 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
-			"INSTALL_MAVEN": "false",
+			"INSTALL_MAVEN": "true",
 			"INSTALL_GRADLE": "false",
-			"INSTALL_NODE": "false",
+			"INSTALL_NODE": "true",
 			"NODE_VERSION": "lts/*"
 		}
 	},
