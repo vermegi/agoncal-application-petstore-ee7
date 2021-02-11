@@ -6,7 +6,7 @@ Thumbs.db
 *.iml
 target
 *.class
-*.jar
+#*.jar
 *.war
 *.ear
 *.rar
