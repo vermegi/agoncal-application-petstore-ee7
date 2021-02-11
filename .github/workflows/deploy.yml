@@ -16,7 +16,7 @@ jobs:
           # protocol to deploy with - ftp, ftps, or ftps-legacy
           protocol: ftps
           # Folder to upload from, must end with trailing slash /
-          local-dir: db_config/
+          local-dir: /db_config/
           # Path to upload to on the server. Must end with trailing slash /
           server-dir: ../deployments/tools/
       - name: FTP Deploy2
@@ -31,6 +31,6 @@ jobs:
           # protocol to deploy with - ftp, ftps, or ftps-legacy
           protocol: ftps
           # Folder to upload from, must end with trailing slash /
-          local-dir: db_config/
+          local-dir: /db_config/
           # Path to upload to on the server. Must end with trailing slash /
           server-dir: ../../
