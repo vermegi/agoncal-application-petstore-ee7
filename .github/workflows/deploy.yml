@@ -1,0 +1,37 @@
+on: [push]
+
+jobs:
+  ftp: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: FTP Deploy1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          # ftp server
+          server: waws-prod-am2-385.ftp.azurewebsites.windows.net
+          # ftp username
+          username: ${{ secrets.FTP_USERNAME }}
+          # ftp password
+          password: ${{ secrets.FTP_PASS }}
+          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          protocol: ftps
+          # Folder to upload from, must end with trailing slash /
+          local-dir: ./db_config/
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: /site/deployments/tools/
+      - name: FTP Deploy2
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          # ftp server
+          server: waws-prod-am2-385.ftp.azurewebsites.windows.net
+          # ftp username
+          username: ${{ secrets.FTP_USERNAME }}
+          # ftp password
+          password: ${{ secrets.FTP_PASS }}
+          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          protocol: ftps
+          # Folder to upload from, must end with trailing slash /
+          local-dir: ./db_config/
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: /
