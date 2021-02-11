@@ -1,3 +1,7 @@
+# Repo
+
+Running through https://github.com/Azure-Samples/jboss-on-app-service#configure-jboss-eap-for-postgresql
+
 # Application - Petstore Java EE 7
 
 * *Author* : [Antonio Goncalves](http://www.antoniogoncalves.org)
